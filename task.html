@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAA - Task Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="tasks.html" class="nav-link active">Tasks</a>
+        <a href="performance.html" class="nav-link">Performance</a>
+        <a href="analytics.html" class="nav-link">Analytics</a>
+        <a href="login.html" class="nav-link" style="color: #d32f2f;">Logout</a>
+    </div>
+
+    <div class="container">
+        <h1>Task Manager</h1>
+
+        <div class="card">
+            <h3>Add New Task</h3>
+            <form>
+                <label>Task Name</label>
+                <input type="text" placeholder="E.g. Study for History Exam">
+
+                <label>Deadline</label>
+                <input type="date">
+
+                <label>Difficulty</label>
+                <select>
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+
+                <label>Importance</label>
+                <select>
+                    <option>Optional</option>
+                    <option>Required</option>
+                    <option>Critical</option>
+                </select>
+
+                <label>Category</label>
+                <select>
+                    <option>Homework</option>
+                    <option>Exam Prep</option>
+                    <option>Project</option>
+                    <option>Reading</option>
+                </select>
+
+                <button type="button" class="btn">Add Task</button>
+            </form>
+        </div>
+
+        <h2>Upcoming Tasks</h2>
+
+        <div class="card task-card">
+            <h4>Calculus Assignment</h4>
+            <p>Due: **2025-11-28** (Tomorrow) | Difficulty: High</p>
+            <p class="task-category">Homework</p>
+        </div>
+
+        <div class="card task-card">
+            <h4>Physics Reading (Ch. 4)</h4>
+            <p>Due: **2025-11-30** (Friday) | Difficulty: Medium</p>
+            <p class="task-category">Reading</p>
+        </div>
+        
+        <div class="card task-card">
+            <h4>Group Project Outline</h4>
+            <p>Due: **2025-12-05** (Next Week) | Difficulty: Low</p>
+            <p class="task-category">Project</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

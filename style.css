@@ -1,0 +1,228 @@
+/* GLOBAL STYLES */
+:root {
+    --color-primary: #1e88e5; /* Deeper, richer blue */
+    --color-secondary: #0d47a1; /* Dark blue for active state */
+    --color-text-dark: #333;
+    --color-text-light: #666;
+    --color-background: #f0f4f7; /* Very light cool background */
+    --color-card-background: #ffffff;
+    --border-radius: 8px;
+    --box-shadow-light: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* HEADINGS */
+h1 {
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+h2 {
+    color: var(--color-text-dark);
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: var(--color-primary);
+    margin-top: 0;
+    border-bottom: 2px solid #e0f0ff;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* CONTAINER */
+.container {
+    width: 900px; /* Slightly wider content area */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background-color: var(--color-card-background);
+    padding: 15px 0;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 500;
+    margin: 0 20px;
+    font-size: 17px;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link.active {
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+    font-weight: 600;
+}
+
+/* CARD STYLING */
+.card {
+    background-color: var(--color-card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    margin-bottom: 25px;
+}
+
+/* FLEX ROW (Simple Row Layout for Dashboard metrics/Analytics) */
+/* Using simple inline-block for beginner compatibility, though Flexbox is simpler */
+.card-row {
+    display: block;
+    overflow: hidden; /* Clear floats */
+    margin-bottom: 10px;
+}
+
+.card-half {
+    width: 48%; /* Almost half */
+    float: left;
+    margin-right: 4%;
+    box-sizing: border-box;
+}
+.card-half:last-child {
+    margin-right: 0;
+}
+
+
+/* FORMS */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--color-text-dark);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 15px;
+    background-color: #fcfdff;
+}
+select {
+    appearance: none; /* Removes default OS styling for a cleaner look */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231e88e5%22%20d%3D%22M287%20163.7c-4.4%205-10.7%207.6-17.1%207.6H22.5c-6.4%200-12.7-2.6-17.1-7.6-9.5-10.9-9.5-27.8%200-38.7l126.3-145c4.6-5.4%2011-8.5%2017.8-8.5s13.2%203.1%2017.8%208.5l126.3%20145c9.5%2010.9%209.5%2027.8%200%2038.7z%22%20transform%3D%22rotate(180%20146.2%20146.2)%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 10px;
+    padding-right: 30px;
+}
+
+/* BUTTONS */
+.btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--color-secondary);
+}
+
+/* LOGIN PAGE SPECIFIC */
+.login-wrapper {
+    width: 450px;
+    margin: 120px auto 0;
+    text-align: center;
+}
+
+.login-footer {
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.login-footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* UTILITY / PLACEHOLDERS */
+.placeholder-box {
+    background-color: #e5f2ff; /* Light blue placeholder background */
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--color-primary);
+    font-style: italic;
+    font-weight: 500;
+    border: 2px dashed var(--color-primary);
+    opacity: 0.7;
+}
+
+.status-high { color: #d32f2f; font-weight: bold; } /* Red */
+.status-low { color: #388e3c; font-weight: bold; }  /* Green */
+.metric-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-top: 10px;
+}
+.metric-label {
+    color: var(--color-text-light);
+    font-size: 14px;
+}
+
+/* Task Card Specific */
+.task-card h4 {
+    color: var(--color-secondary);
+    margin-bottom: 5px;
+}
+.task-card p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+.task-category {
+    background-color: #e0f0ff;
+    color: var(--color-secondary);
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 600;
+}

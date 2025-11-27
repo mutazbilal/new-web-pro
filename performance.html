@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAA - Performance Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="tasks.html" class="nav-link">Tasks</a>
+        <a href="performance.html" class="nav-link active">Performance</a>
+        <a href="analytics.html" class="nav-link">Analytics</a>
+        <a href="login.html" class="nav-link" style="color: #d32f2f;">Logout</a>
+    </div>
+
+    <div class="container">
+        <h1>Performance Predictor</h1>
+
+        <div class="card">
+            <h3>Enter Academic Data for Prediction</h3>
+            <form>
+                <label>Midterm Grade (0-100)</label>
+                <input type="number" placeholder="85">
+
+                <label>Attendance Percentage (%)</label>
+                <input type="number" placeholder="90">
+
+                <label>Weekly Study Hours</label>
+                <input type="number" placeholder="10">
+
+                <label>Assignment Completion (%)</label>
+                <input type="number" placeholder="95">
+
+                <label>Average Sleep Hours</label>
+                <input type="number" placeholder="7">
+
+                <button type="button" class="btn">Calculate Prediction</button>
+            </form>
+        </div>
+
+        <div class="card-row">
+            <div class="card card-half" style="text-align: center;">
+                <h3>Predicted Final Score</h3>
+                <p class="metric-value" style="font-size: 40px;">88%</p>
+                <p class="metric-label">Estimated Grade: **B+ / A-**</p>
+            </div>
+            
+            <div class="card card-half">
+                <h3>Prediction Confidence</h3>
+                <p class="metric-value" style="color: #388e3c; font-size: 40px;">High</p>
+                <p class="metric-label">Accuracy based on current data</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Personalized Suggestions</h3>
+            <ul>
+                <li>To achieve an A (93%+), **increase weekly study time by 3 hours**.</li>
+                <li>Ensure **Assignment Completion** remains above 90% for maximum impact.</li>
+                <li>Review Midterm mistakes, especially concerning **topic X**, to improve final exam performance.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
